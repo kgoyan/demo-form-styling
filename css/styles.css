@@ -1,1 +1,130 @@
 /* developer styles go here */
+
+:root {
+    --cream: #e5e1db;
+    --yellow: #cfb450;
+    --grey: #6b6267;
+    --lt-grey: #d2cfd1;
+}
+
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0,0,0,0);
+    border: 0;
+  }
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.flex-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+h2 {
+
+}
+
+/* ************** header **************  */
+header {
+    background-color: var(--cream);
+    padding: 0 1.5rem 0.5rem 1.5rem;
+}
+
+nav {
+    max-height: 0;
+    overflow: hidden;
+}
+
+button {
+    background-color: var(--grey);
+    border: none;
+    color: var(--cream);
+    cursor: pointer;
+    border-radius: 5px;
+    text-transform: uppercase;
+    padding: 0.25rem 0.4rem;
+}
+
+input[id="search"] {
+    width: 100%;
+    border-radius: 5px;
+    line-height: 40px;
+    border: none;
+    background-image: url(../img/magnifying-glass.svg);
+    background-repeat: no-repeat;
+    background-size: 25px 25px;
+    background-position: center left 5px;
+    padding-left: 35px;
+}
+
+
+/* ******************* log in **********************  */
+
+section {
+    padding: 1.5rem;
+}
+
+
+.login-form {
+    border: 1px solid var(--lt-grey);
+    padding: 1.5rem;
+    border-radius: 5px;
+    box-shadow: 3px 3px 5px var(--lt-grey);
+}
+
+.login-form label{
+    display: block;
+}
+
+.login-form > div {
+    margin-bottom: 1rem;
+}
+
+input[type=email],
+input[type=password] {
+    width: 100%;
+    border: none;
+    border-bottom: 1px solid var(--lt-grey);
+    padding: 0.5rem;
+}
+
+.login-form p {
+    font-size: 0.8rem;
+    font-style: italic;
+    color: var(--grey);
+}
+
+input[type=submit] {
+    background-color: var(--yellow);
+    padding: 0.25rem 0.5rem;
+    border: none;
+    border-radius: 5px;
+    text-transform: uppercase;
+    border: 2px solid var(--yellow);
+}
+
+input[type=submit]:hover {
+    background-color: white;
+    color: var(--grey);
+    cursor: pointer;q
+}
+
+
+/* this will style the browser styling of the input to show it's invalid  */
+input[type=email]:invalid,
+input[type=password]:invalid {
+    outline: 1px solid tomato;
+}
+
+input[type=email]:valid,
+input[type=password]:valid {
+    outline: 1px solid green;
+}
